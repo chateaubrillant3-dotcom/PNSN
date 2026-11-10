@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: wheat;
+  color: #1f2421;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #0f6e56;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;             /* les aligne au milieu en hauteur */
+  justify-content: space-between;  /* premier à gauche, dernier à droite */
+}
+
+header a {
+  color: white;
+  margin-left: 15px;               /* espace à gauche de chaque lien */
+}
+
+p {
+  color: #5b635f;
+}
+
+h1 {
+  color: #094f3e;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  /* CORRIGÉ : "border: 1px" ne marche pas, il faut aussi le style et la couleur */
+  border: 1px solid #dde3df;
+}
+
+/* CORRIGÉ : cette règle manquait, le bouton restait gris */
+button {
+  background-color: #0f6e56;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #094f3e;
+}
+
+article {
+  background-color: white;
+  /* CORRIGÉ : même problème que pour les champs */
+  border: 1px solid #dde3df;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+article h3 {
+  margin: 0 0 6px 0;
+}
+
+article a {
+  display: inline-block;
+  background-color: #e1f5ee;
+  color: #0f6e56;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+article:hover {
+  border-color: #0f6e56;
+}
+
+footer {
+  text-align: center;
+  color: #0f6e56;
+  padding: 20px;
+}
+
+.liste {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.bandeau {
+  background-color: #0f6e56;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.bandeau h1 {
+  color: white;
+}
+
+.bandeau p {
+  color: #cdeee2;
+}
+
+.recherche {
+  background-color: white;
+  padding: 12px;
+  border-radius: 14px;
+  display: flex;   /* CORRIGÉ : cette ligne manquait, les champs n'étaient pas sur une ligne */
+  gap: 8px;
+}
+
+/* CORRIGÉ : "input" manquait après ".recherche" */
+.recherche input,
+.recherche select,
+.recherche button {
+  margin: 0;
+}
+
+.recherche input {
+  flex: 1;
+}
+
+header a.logo {
+  margin-left: 0;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .liste {
+    grid-template-columns: 1fr;
+  }
+
+  .recherche {
+    flex-direction: column;
+  }
+}

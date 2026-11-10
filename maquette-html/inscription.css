@@ -1,0 +1,17 @@
+/* Petit texte d'aide sous un champ */
+.aide {
+  font-size: 12px;
+  color: #5b635f;
+  margin: 6px 0 0 0;
+}
+
+/* Le titre de la carte colle moins au bord du haut */
+.carte-formulaire h1 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+/* Un champ qui a une erreur : bordure rouge */
+.carte-formulaire input:invalid:not(:placeholder-shown) {
+  border-color: #a32d2d;
+}

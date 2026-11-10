@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantéMada - Connexion</title>
+    <link rel="stylesheet" href="acceuil.css">
+    <link rel="stylesheet" href="connexion.css">
+</head>
+<body>
+    <header>
+        <a href="acceuil.html" class="logo">SantéMada</a>
+        <nav>
+            <a href="acceuil.html">Rechercher</a>
+            <a href="connexion.html">Se connecter</a>
+        </nav>
+    </header>
+
+    <main>
+        <form class="carte-formulaire" id="formulaire-connexion">
+            <h1>Connexion</h1>
+            <p>Bienvenue ! Connectez-vous pour réserver.</p>
+
+            <label for="identifiant">Téléphone ou e-mail</label>
+            <input type="text" id="identifiant" placeholder="034 00 000 00">
+
+            <label for="mdp">Mot de passe</label>
+            <input type="password" id="mdp">
+
+            <button>Se connecter</button>
+
+            <p id="zone-message" class="message"></p>
+
+            <p class="bas">Pas de compte ? <a href="inscription.html">Créer un compte</a></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2026 SantéMada · Madagascar</p>
+    </footer>
+
+    <script src="connexion.js"></script>
+</body>
+</html>

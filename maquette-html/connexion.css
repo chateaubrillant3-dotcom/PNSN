@@ -1,0 +1,61 @@
+.carte-formulaire {
+  background-color: white;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  /* CORRIGÉ : "1px solid" sans couleur ; on ajoute la couleur */
+  border: 1px solid #dde3df;
+  border-radius: 16px;
+}
+
+.carte-formulaire label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #5b635f;
+}
+
+.carte-formulaire input {
+  /* CORRIGÉ : 100px donnait un champ minuscule, 100% prend toute la largeur de la carte */
+  width: 100%;
+  margin: 0;
+}
+
+.carte-formulaire button {
+  /* CORRIGÉ : même chose pour le bouton */
+  width: 100%;
+  margin: 24px 0 0 0;
+  padding: 12px;
+}
+
+.bas {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* AJOUTÉ : le lien "Créer un compte" en vert */
+.bas a {
+  color: #0f6e56;
+}
+
+.message {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.message:empty {
+  display: none;
+}
+
+.message.erreur {
+  background-color: #fcebeb;
+  color: #a32d2d;
+}
+
+.message.succes {
+  background-color: #eaf3de;
+  color: #3b6d11;
+}
