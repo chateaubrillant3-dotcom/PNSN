@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SantéMada - Rendez-vous</title>
+    <link rel="stylesheet" href="acceuil.css">
+    <link rel="stylesheet" href="rendez-vous.css">
+</head>
+<body>
+    <header>
+        <a href="acceuil.html" class="logo">SantéMada</a>
+        <nav>
+            <a href="acceuil.html">Rechercher</a>
+            <a href="connexion.html" id="lien-connexion">Se connecter</a>
+        </nav>
+    </header>
+
+    <main>
+        <a href="acceuil.html" class="retour">← Retour à la recherche</a>
+
+        <section class="carte-rdv">
+            <h1>Prendre rendez-vous</h1>
+
+            <div class="infos-medecin">
+                <h2 id="nom-medecin"></h2>
+                <p id="details-medecin"></p>
+            </div>
+
+            <form id="formulaire-rdv">
+                <label for="date">Date</label>
+                <input type="date" id="date">
+
+                <p class="titre-creneaux">Créneaux disponibles</p>
+                <div class="creneaux" id="creneaux"></div>
+
+                <label for="motif">Motif de la consultation</label>
+                <input type="text" id="motif" placeholder="Fièvre depuis deux jours">
+
+                <button class="confirmer">Confirmer le rendez-vous</button>
+            </form>
+
+            <p id="zone-message" class="message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 SantéMada · Madagascar</p>
+    </footer>
+
+    <script src="session.js"></script>
+    <script src="medecins.js"></script>
+    <script src="rendez-vous.js"></script>
+</body>
+</html>

@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SantéMada - Connexion</title>
+    <title>SantéMada - Accueil</title>
     <link rel="stylesheet" href="acceuil.css">
-    <link rel="stylesheet" href="connexion.css">
-</head>
-<body>
+  </head>
+
+  <body>
+
+    <!-- 1. LA BARRE DU HAUT -->
     <header>
-        <a href="acceuil.html" class="logo">SantéMada</a>
-        <nav>
-            <a href="acceuil.html">Rechercher</a>
-           <a href="connexion.html" id="lien-connexion">Se connecter</a>
-        </nav>
+      <a href="acceuil.html" class="logo">SantéMada</a>
+      <nav>
+        <a href="acceuil.html">Rechercher</a>
+        <a href="connexion.html" id="lien-connexion">Se connecter</a>
+      </nav>
     </header>
 
+    <!-- 2. LE CONTENU PRINCIPAL -->
     <main>
-        <form class="carte-formulaire" id="formulaire-connexion">
-            <h1>Connexion</h1>
-            <p>Bienvenue ! Connectez-vous pour réserver.</p>
 
-            <label for="identifiant">Téléphone ou e-mail</label>
-            <input type="text" id="identifiant" placeholder="034 00 000 00">
+      <!-- Le bandeau vert : titre et recherche -->
+      <section class="bandeau">
+        <h1>Trouvez un professionnel de santé</h1>
+        <p>Cherchez un médecin, un établissement ou une spécialité.</p>
 
-            <label for="mdp">Mot de passe</label>
-            <input type="password" id="mdp">
+        <form class="recherche">
+          <input type="text" id="champ-recherche" placeholder="Cardiologue, pédiatre, hôpital...">
 
-            <button>Se connecter</button>
+          <select id="filtre-region">
+            <option value="">Toutes les régions</option>
+            <option value="Analamanga">Analamanga</option>
+            <option value="Amoron'i Mania">Amoron'i Mania</option>
+            <option value="Haute Matsiatra">Haute Matsiatra</option>
+          </select>
 
-            <p id="zone-message" class="message"></p>
+          <select id="filtre-specialite">
+            <option value="">Toutes les spécialités</option>
+            <option value="Pédiatrie">Pédiatrie</option>
+            <option value="Cardiologie">Cardiologie</option>
+            <option value="Médecine générale">Médecine générale</option>
+            <option value="Gynécologie">Gynécologie</option>
+          </select>
 
-            <p class="bas">Pas de compte ? <a href="inscription.html">Créer un compte</a></p>
+          <button>Rechercher</button>
         </form>
+      </section>
+
+      <!-- La liste des médecins : la grille est vide, JavaScript la remplit -->
+      <h2>Professionnels disponibles</h2>
+      <p id="message"></p>
+
+      <div class="liste" id="liste"></div>
+
     </main>
 
+    <!-- 3. LE PIED DE PAGE -->
     <footer>
-        <p>© 2026 SantéMada · Madagascar</p>
+      <p>© 2026 SantéMada · Madagascar</p>
     </footer>
 
-    <script src="connexion.js"></script>
+    <!-- 4. LES SCRIPTS : les partagés d'abord, celui de la page en dernier -->
     <script src="session.js"></script>
+    <script src="medecins.js"></script>
     <script src="acceuil.js"></script>
+
   </body>
-</body>
 </html>
