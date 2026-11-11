@@ -3,46 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sante mada -creer une compte</title>
+    <title>SantéMada - Créer un compte</title>
+    <link rel="stylesheet" href="acceuil.css">
     <link rel="stylesheet" href="connexion.css">
-    <link rel="stylesheet" href="acceuil.css">
-</head>
-
-<header>
-    <a href="acceuil.html" class="logo">SantéMada</a>
-    <a href="acceuil.html">Rechercher</a>
-   <a href="connexion.html" id="lien-connexion">Se connecter</a>
     <link rel="stylesheet" href="inscription.css">
-
-    <link rel="stylesheet" href="acceuil.css">
-<link rel="stylesheet" href="connexion.css">
-<link rel="stylesheet" href="inscription.css">
-
-</header>
-
-<main>
-    <form class="carte formulaire">
-        <h1>Creer une compte</h1>
-        <p>iscrivez_vous pour prendre une rendez-vous</p>
-
-        <label for="nom">nom complet</label>
-        <input type="text" id="nom" placeholder="rakoto" required>
-
-        <label for="identifiant">telephone ou Email</label>
-        <input type="text" id="identifiant" placeholder="0340000000" required>
-
-        <label for="mdp">Mot de passe</label>
-        <input type="password" id="mdp"  required>
-
-        <button>Creer une compte</button>
-        
-        <p class="bas"> Deja inscrit? <a href="connexion.html"></a>Se connecter</p>
-    </form>
-</main>
+</head>
 <body>
-    <footer><p> 2026 Sante Madagascar</p></footer>
+    <header>
+        <a href="acceuil.html" class="logo">SantéMada</a>
+        <nav>
+            <a href="acceuil.html">Rechercher</a>
+            <a href="connexion.html" id="lien-connexion">Se connecter</a>
+        </nav>
+    </header>
 
-        <script src="session.js"></script>
-</body>
+    <main>
+        <form class="carte-formulaire" id="formulaire-inscription">
+            <h1>Créer un compte</h1>
+            <p>Inscrivez-vous pour prendre rendez-vous.</p>
+
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" placeholder="Rakoto Jean">
+
+            <label for="identifiant">Téléphone ou e-mail</label>
+            <input type="text" id="identifiant" placeholder="034 00 000 00">
+
+            <label for="mdp">Mot de passe</label>
+            <input type="password" id="mdp">
+            <p class="aide">6 caractères minimum.</p>
+
+            <label for="mdp2">Confirmer le mot de passe</label>
+            <input type="password" id="mdp2">
+
+            <button>Créer mon compte</button>
+
+            <p id="zone-message" class="message"></p>
+
+            <p class="bas">Déjà inscrit ? <a href="connexion.html">Se connecter</a></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2026 SantéMada · Madagascar</p>
+    </footer>
+
+    <script src="session.js"></script>
+    <script src="comptes.js"></script>
+    <script src="inscription.js"></script>
 </body>
 </html>
