@@ -1,17 +1,6 @@
 // ============================================
-// 1. LES DONNÉES : un tableau d'objets
-// ============================================
-let medecins = [
-  { nom: "Dr Rasoamanana", specialite: "Pédiatrie", etablissement: "CHU Antananarivo", region: "Analamanga" },
-  { nom: "Dr Andrianina", specialite: "Cardiologie", etablissement: "Clinique Ravelo", region: "Analamanga" },
-  { nom: "Dr Razafy", specialite: "Médecine générale", etablissement: "CSB2 Ambositra", region: "Amoron'i Mania" },
-  { nom: "Dr Rakotondrabe", specialite: "Gynécologie", etablissement: "CHU Antananarivo", region: "Analamanga" },
-  { nom: "Dr Randria", specialite: "Pédiatrie", etablissement: "CSB2 Ambositra", region: "Amoron'i Mania" },
-  { nom: "Dr Ravelomanana", specialite: "Cardiologie", etablissement: "CHU Fianarantsoa", region: "Haute Matsiatra" }
-];
-
-// ============================================
-// 2. LES ÉLÉMENTS DE LA PAGE
+// 1. LES ÉLÉMENTS DE LA PAGE
+// (le tableau "medecins" vient de medecins.js)
 // ============================================
 let liste = document.getElementById("liste");
 let message = document.getElementById("message");
@@ -21,7 +10,7 @@ let choixSpecialite = document.getElementById("filtre-specialite");
 let formulaire = document.querySelector(".recherche");
 
 // ============================================
-// 3. AFFICHER UN TABLEAU DE MÉDECINS
+// 2. AFFICHER UN TABLEAU DE MÉDECINS
 // ============================================
 function afficher(tableau) {
   liste.innerHTML = "";
@@ -32,7 +21,7 @@ function afficher(tableau) {
         <h3>${m.nom}</h3>
         <p>${m.specialite}</p>
         <p>${m.etablissement}, ${m.region}</p>
-        <a href="#">Prendre rendez-vous</a>
+        <a href="rendez-vous.html?id=${m.id}">Prendre rendez-vous</a>
       </article>
     `;
   }
@@ -45,7 +34,7 @@ function afficher(tableau) {
 }
 
 // ============================================
-// 4. FILTRER SELON LES TROIS CONTRÔLES
+// 3. FILTRER SELON LES TROIS CONTRÔLES
 // ============================================
 function filtrer() {
   let texte = champ.value.toLowerCase();
@@ -66,7 +55,7 @@ function filtrer() {
 }
 
 // ============================================
-// 5. LES ÉVÉNEMENTS : tout appelle la même fonction
+// 4. LES ÉVÉNEMENTS
 // ============================================
 champ.addEventListener("input", filtrer);
 choixRegion.addEventListener("change", filtrer);
@@ -77,6 +66,6 @@ formulaire.addEventListener("submit", function (event) {
 });
 
 // ============================================
-// 6. AU CHARGEMENT : on affiche tout
+// 5. AU CHARGEMENT : on affiche tout
 // ============================================
 afficher(medecins);

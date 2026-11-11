@@ -1,0 +1,124 @@
+.retour {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #0f6e56;
+  text-decoration: none;
+}
+
+.carte-rdv {
+  background-color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #dde3df;
+  border-radius: 16px;
+}
+
+.carte-rdv h1 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.infos-medecin {
+  background-color: #e1f5ee;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.infos-medecin h2 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  color: #094f3e;
+}
+
+.infos-medecin p {
+  margin: 0;
+  color: #0f6e56;
+}
+
+.carte-rdv label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #5b635f;
+}
+
+.carte-rdv input {
+  width: 100%;
+  margin: 0;
+}
+
+.titre-creneaux {
+  margin: 20px 0 8px 0;
+  font-size: 14px;
+}
+
+.confirmer {
+  width: 100%;
+  margin: 24px 0 0 0;
+  padding: 12px;
+}
+
+/* --- Les boutons de créneaux --- */
+.creneaux {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.creneau {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 14px;
+  background-color: white;
+  color: #1f2421;
+  border: 1px solid #dde3df;
+}
+
+.creneau:hover {
+  background-color: #e1f5ee;
+}
+
+.creneau.actif {
+  background-color: #0f6e56;
+  color: white;
+  border-color: #0f6e56;
+}
+
+.creneau:disabled,
+.creneau:disabled:hover {
+  background-color: #eceeed;
+  color: #aab0ad;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+/* --- Les messages --- */
+.message {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.message:empty {
+  display: none;
+}
+
+.message.erreur {
+  background-color: #fcebeb;
+  color: #a32d2d;
+}
+
+.message.succes {
+  background-color: #eaf3de;
+  color: #3b6d11;
+}
+
+@media (max-width: 500px) {
+  .creneaux {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
